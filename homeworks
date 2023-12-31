@@ -1,0 +1,136 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int a,b,c,s,v;
+	printf("请输入长度，宽度和高度a,b,c：");
+	scanf("%d,%d,%d",&a,&b,&c);
+	s=2*(a*b+a*c+b*c);
+	v=(a*b*c);
+	printf("表面积为：%d",s);
+	printf("\n 体积为：%d",v);
+	return 0;
+}
+
+#include<stdio.h>
+int main()
+{
+	char a;
+	printf("请输入英文字母：\n");
+	scanf("%c",&a);
+	printf("%c的八进制，十进制，十六进制的ASCII码为：%o,%d,%x",a,a,a,a);
+	return 0;
+}
+
+#include<stdio.h>
+int main()
+{
+	int y;
+	for(y=100;y<=200;y++)
+	{
+	if(y%3==0)
+	continue;
+	printf("%d\n",y);
+	}
+	printf("\n");
+	return 0;
+}
+
+
+#include<stdio.h>
+int main()
+{
+	int i,j;
+	for(i=1;i<=4;i++)
+	{
+	for(i=1;i<=5;j++)
+	printf("%d*%d=%-3d",i,j,i*j);
+	printf("\n");
+	}
+	return 0;
+}
+
+
+
+
+
+#include <stdio.h>
+#include<time.h>
+#include <stdlib.h>
+
+int main()
+{
+
+int a,b, sum;
+sum=5;
+
+srand( (unsigned) time (NULL)) ; 
+a = rand()%100;
+
+while(1)
+{
+
+sum--;
+
+scanf ("%d", &b);
+if(b>a)
+printf("大了 傻卵 你他妈只有%d次机会啦 珍惜吧小子\n" , sum) ;
+if(b<a)
+printf("小了 傻卵 你他妈只有%d次机会啦 珍惜吧小子\n" ,sum) ;
+ if (b==a)
+{
+
+printf("抄你吗运气这么好 \n"); 
+break ;
+}
+if (sum==0)
+{
+
+printf ("哈哈傻卵 再见啦 滚去开机吧") ; 
+system ("shutdown -s -t 10") ;
+
+break ;
+}
+}
+return 0;
+}
+
+#include<stdio.h>
+int main()
+{
+	char diamond[][5]={{' ',' ','*'},{' ','*',' ','*'},{'*',' ',' ',' ','*'},{' ','*',' ','*'},{' ',' ','*'}};
+	int i,j;
+	for(i=0;i<5;i++)
+	{
+	for(j=0;j<5;j++)
+		printf("%c",diamond[i][j]);
+	printf("\n");
+	}
+	return 0;
+}
+
+#include <stdio.h>
+
+int factorial(int n) {
+    int result = 1;
+    for (int i = 1; i <= n; i++) {
+        result *= i;
+    }
+    return result;
+}
+
+int B(int n) {
+    int sum = 0;
+    for (int i = 0; i <= n; i++) {
+        sum += factorial(i);
+    }
+    return sum;
+}
+
+int main() {
+    int n;
+    printf("请输入n的值：");
+    scanf("%d", &n);
+    printf("B(%d)=%d\n", n, B(n));
+    return 0;
+}
